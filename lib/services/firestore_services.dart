@@ -6,4 +6,8 @@ class FireStoreService {
   static CollectionReference<Map<String, dynamic>> users() {
     return firebaseFirestoreInstance.collection("users");
   }
+
+  static CollectionReference<Map<String, dynamic>> customers() {
+    return users().doc("currentUserid").collection("customers");
+  }
 }
